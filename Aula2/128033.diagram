@@ -1,0 +1,45 @@
+format 222
+
+classcanvas 128033 class_ref 128033 // Aluno
+  classdiagramsettings member_max_width 0 end
+  xyz 43.5 47.5 2000
+end
+classcanvas 128161 class_ref 128161 // Disciplina
+  classdiagramsettings member_max_width 0 end
+  xyz 334.5 49.5 2000
+end
+classcanvas 128289 class_ref 128289 // Licenciatura
+  classdiagramsettings member_max_width 0 end
+  xyz 498.5 63.5 2000
+end
+classcanvas 129953 class_ref 128417 // Inscricao
+  classdiagramsettings member_max_width 0 end
+  xyz 239 162.5 2000
+end
+classcanvas 130209 class_ref 128545 // Curriculo
+  classdiagramsettings member_max_width 0 end
+  xyz 417 159 2000
+end
+relationcanvas 128801 relation_ref 128289 // Curriculo
+  from ref 128289 z 2001 label "Curriculo" italic max_width 255 xyz 440 74 3000 to point 419 78
+  line 130465 z 2001 to ref 128161
+  no_role_a no_role_b
+  multiplicity_a_pos 409 85 3000 multiplicity_b_pos 488 91 3000
+end
+relationcanvas 129441 relation_ref 128801 // Inscreve-se
+  from ref 128033 z 2001 label "Inscreve-se" italic max_width 255 xyz 234.5 66 3000 to ref 128161
+  no_role_a no_role_b
+  multiplicity_a_pos 326 81 3000 multiplicity_b_pos 193 83 3000
+end
+relationcanvas 130593 relation_ref 128929 // Matricula-se
+  from ref 128033 z 2001 label "Matricula-se" italic max_width 255 xyz 280.5 2 3000 to point 99 7
+  line 130721 z 2001 to point 515 8
+  line 130849 z 2001 to ref 128289
+  no_role_a no_role_b
+  multiplicity_a_pos 527 51 3000 multiplicity_b_pos 99 35 3000
+end
+line 130081 -_-_
+  from ref 129441 z 2002 to ref 129953
+line 130337 -_-_
+  from ref 128801 z 2002 to ref 130209
+end

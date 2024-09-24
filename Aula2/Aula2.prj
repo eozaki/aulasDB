@@ -1,0 +1,524 @@
+format 222
+"Aula2"
+  revision 1
+  modified_by 33 "erick"
+
+
+  
+  // class settings
+  default_attribute_visibility private default_relation_visibility private default_operation_visibility public
+  
+  classdiagramsettings draw_all_relations yes hide_attributes no hide_operations no hide_getset_operations no hide_ports no show_members_full_definition no show_members_visibility no show_members_stereotype no show_members_context no show_members_multiplicity no show_members_initialization no show_attribute_modifiers no member_max_width 127 show_parameter_dir yes show_parameter_name yes package_name_in_tab no class_drawing_mode natural drawing_language uml show_context_mode no auto_label_position yes show_relation_modifiers no show_relation_visibility no show_infonote no shadow yes gradient none show_stereotype_properties no end
+  
+  classcompositediagramsettings auto_label_position yes draw_all_relations yes shadow yes gradient none end
+  
+  usecasediagramsettings package_name_in_tab no show_context_mode no auto_label_position yes draw_all_relations yes class_drawing_mode actor shadow yes gradient none show_stereotype_properties no end
+  
+  sequencediagramsettings show_full_operations_definition no show_class_of_operation no write_horizontally yes instances_drawing_mode natural drawing_language uml draw_all_relations yes shadow yes gradient none show_stereotype_properties no show_class_context_mode no show_msg_context_mode no end
+  
+  collaborationdiagramsettings show_full_operations_definition no show_class_of_operation no show_hierarchical_rank no write_horizontally yes instances_drawing_mode natural drawing_language uml package_name_in_tab no show_class_pack_context_mode no show_msg_context_mode no draw_all_relations yes shadow yes gradient none show_stereotype_properties no end
+  
+  objectdiagramsettings write_horizontally yes package_name_in_tab no show_class_pack_context_mode no auto_label_position yes draw_all_relations yes shadow yes gradient none show_stereotype_properties no end
+  
+  objectcompositediagramsettings auto_label_position yes draw_all_relations yes shadow yes gradient none end
+  
+  componentdiagramsettings package_name_in_tab no show_context_mode no auto_label_position yes draw_all_relations yes shadow yes gradient none
+   draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no end
+  
+  deploymentdiagramsettings package_name_in_tab no show_context_mode no write_horizontally yes auto_label_position yes draw_all_relations yes shadow yes gradient none
+   draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no end
+  
+  statediagramsettings package_name_in_tab no show_context_mode no auto_label_position yes write_label_horizontally yes show_trans_definition no draw_all_relations yes shadow yes gradient none
+   show_activities yes region_horizontally yes drawing_language uml show_stereotype_properties no end
+  
+  activitydiagramsettings package_name_in_tab no show_context_mode no show_opaque_action_definition no auto_label_position yes write_label_horizontally no draw_all_relations yes shadow yes gradient none
+   show_infonote yes drawing_language uml show_stereotype_properties no end
+  
+  class_color yellow duration_color transparent continuation_color gray note_color blue fragment_color transparent subject_color transparent usecase_color yellow package_color transparent component_color green artifact_color green deploymentnode_color gray state_color yellow stateaction_color transparent activity_color transparent activityregion_color transparent activitypartition_color transparent activityaction_color transparent parameterpin_color white generalization_color black 
+  dpi 72
+  font_size 10
+  diagram_format A4
+
+  image_root_dir ""
+
+
+  mark_for_import
+  
+  ncouples 12
+  key "gxmi path" value "/Users/erick/Documents/BD/Aula2/Exercicio2.xmi"
+  key "gxmi no model" value "no"
+  key "gxmi gen views" value "no"
+  key "gxmi encoding" value "UTF-8"
+  key "gxmi umlversion" value "23"
+  key "gxmi pk prefix" value "no"
+  key "gxmi vis prefix" value "no"
+  key "gxmi primitive type" value "no"
+  key "gxmi gen extensions" value "yes"
+  key "gxmi gen eclipse" value "no"
+  key "gxmi comment exporter" value "no"
+  key "gxmi linefeed" value "no"
+  classview 128033 "Exercicio1"
+    
+    classdiagramsettings show_members_full_definition yes show_members_stereotype no member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 128033 "Exercicio1"
+      classdiagramsettings draw_all_relations no show_members_stereotype yes member_max_width 0 end
+      size A4
+    end
+
+    class 128033 "Aluno"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      ncouples 1
+      key "nome" value ""
+      attribute 128033 "nome"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128161 "numero"
+	private explicit_type "int"
+	stereotype "primary key"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128289 "morada"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 129569 // (Inscreve-se)
+	relation 128801 ---- name "Inscreve-se"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 129569 // (Inscreve-se)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 129697 // (Inscreve-se)
+	  association_type class_ref 128417 // Inscricao
+      end
+
+      classrelation 129825 // (Matricula-se)
+	relation 128929 ---- name "Matricula-se"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 129825 // (Matricula-se)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 129953 // (Matricula-se)
+      end
+    end
+
+    class 128161 "Disciplina"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128417 "nome"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128545 "sigla"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 128673 // (Curriculo)
+	relation_ref 128289 // Curriculo
+      end
+
+      classrelation 129697 // (Inscreve-se)
+	relation_ref 128801 // Inscreve-se
+      end
+    end
+
+    class 128289 "Licenciatura"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128801 "nome"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 128545 // (Curriculo)
+	relation 128289 ---- name "Curriculo"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 128545 // (Curriculo)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 128673 // (Curriculo)
+	  association_type class_ref 128545 // Curriculo
+      end
+
+      attribute 128929 "designacao"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 129953 // (Matricula-se)
+	relation_ref 128929 // Matricula-se
+      end
+    end
+
+    class 128417 "Inscricao"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129057 "nota"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 128545 "Curriculo"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129185 "anoLetivo"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+  end
+
+  classview 128161 "Exercicio2"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 128161 "Exercicio2"
+      classdiagramsettings draw_all_relations no show_members_full_definition yes show_members_stereotype yes member_max_width 0 end
+      size A4
+    end
+
+    class 128673 "Consulta"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129313 "NumeroCons"
+	private explicit_type "int"
+	stereotype "primary key"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129441 "Data"
+	private explicit_type "date"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129569 "Valor"
+	private explicit_type "decimal(4,2)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 132129 // (PacienteConsulta)
+	relation 130081 ---- name "PacienteConsulta"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 132129 // (PacienteConsulta)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 132257 // (PacienteConsulta)
+      end
+
+      classrelation 132385 // (EspecialidadeConsulta)
+	relation 130209 ---- name "EspecialidadeConsulta"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 132385 // (EspecialidadeConsulta)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 132513 // (EspecialidadeConsulta)
+      end
+
+      classrelation 132641 // <association>
+	relation 130337 ----
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 132641 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 132769 // <association>
+      end
+    end
+
+    class 128801 "Utente"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129953 "numPaciente"
+	private explicit_type "int"
+	stereotype "primary key"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129697 "nome"
+	private explicit_type "varchar(100)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129825 "morada"
+	private explicit_type "text"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 132257 // (PacienteConsulta)
+	relation_ref 130081 // PacienteConsulta
+      end
+    end
+
+    class 128929 "Medico"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 130593 "numFuncionario"
+	private explicit_type "int"
+	stereotype "primary key"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130081 "nome"
+	private explicit_type "varchar(100)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130465 "morada"
+	private explicit_type "text"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 132769 // <association>
+	relation_ref 130337 // <association>
+      end
+
+      classrelation 133025 // <association>
+	relation_ref 130465 // <association>
+      end
+    end
+
+    class 129057 "Especialidade"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 130209 "CodEspecialidade"
+	private explicit_type "int"
+	stereotype "primary key"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130337 "designacao"
+	private explicit_type "varchar(100)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 132513 // (EspecialidadeConsulta)
+	relation_ref 130209 // EspecialidadeConsulta
+      end
+
+      classrelation 132897 // <association>
+	relation 130465 ----
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 132897 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 133025 // <association>
+      end
+    end
+
+  end
+end

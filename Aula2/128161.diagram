@@ -1,0 +1,40 @@
+format 222
+
+classcanvas 128033 class_ref 128673 // Consulta
+  classdiagramsettings member_max_width 0 end
+  xyz 343 120 2000
+end
+classcanvas 128161 class_ref 128801 // Utente
+  classdiagramsettings member_max_width 0 end
+  xyz 643 124 2000
+end
+classcanvas 130209 class_ref 129057 // Especialidade
+  classdiagramsettings member_max_width 0 end
+  xyz 16 126 2000
+end
+classcanvas 130465 class_ref 128929 // Medico
+  classdiagramsettings member_max_width 0 end
+  xyz 339 298 2000
+end
+relationcanvas 130337 relation_ref 130081 // PacienteConsulta
+  from ref 128033 z 2001 label "PacienteConsulta" italic max_width 255 xyz 538 143 3000 to ref 128161
+  no_role_a no_role_b
+  multiplicity_a_pos 626 159 3000 multiplicity_b_pos 523 158 3000
+end
+relationcanvas 130593 relation_ref 130209 // EspecialidadeConsulta
+  from ref 128033 z 2001 label "EspecialidadeConsulta" italic max_width 255 xyz 223 142 3000 to ref 130209
+  no_role_a no_role_b
+  multiplicity_a_pos 216 157 3000 multiplicity_b_pos 328 157 3000
+end
+relationcanvas 130721 relation_ref 130337 // <association>
+  from ref 128033 z 2001 to ref 130465
+  no_role_a no_role_b
+  multiplicity_a_pos 413 284 3000 multiplicity_b_pos 414 189 3000
+end
+relationcanvas 130849 relation_ref 130465 // <association>
+  from ref 130209 z 2001 to point 105 328
+  line 130977 z 2001 to ref 130465
+  no_role_a no_role_b
+  multiplicity_a_pos 324 335 3000 multiplicity_b_pos 96 183 3000
+end
+end
