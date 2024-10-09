@@ -1,0 +1,12 @@
+window_sizes 2560 1080 223 2331 984 44
+cleanlooks_style
+diagrams
+  active  classdiagram_ref 134561 // Exercicio1
+    1211 804 100 A4-Landscape 0 0
+end
+show_stereotypes
+selected classdiagram_ref 141089 // Exercicio2
+open
+  classview_ref 134561 // Exercicio2
+end
+end

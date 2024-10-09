@@ -1,0 +1,87 @@
+format 222
+
+classcanvas 128033 class_ref 134561 // Investigador
+  classdiagramsettings member_max_width 0 end
+  xyz 319 99 2000
+end
+classcanvas 128161 class_ref 134689 // AreaCientifica
+  classdiagramsettings member_max_width 0 end
+  xyz 84 105 2000
+end
+classcanvas 128289 class_ref 134817 // GrauAcademico
+  classdiagramsettings member_max_width 0 end
+  xyz 568 110 2000
+end
+classcanvas 128417 class_ref 134945 // Pais
+  classdiagramsettings member_max_width 0 end
+  xyz 149 235 2000
+end
+classcanvas 128545 class_ref 135073 // Organismo
+  classdiagramsettings member_max_width 0 end
+  xyz 470 255 2000
+end
+classcanvas 129569 class_ref 135201 // OrganismosTrabalhou
+  classdiagramsettings member_max_width 0 end
+  xyz 297 254 2000
+end
+classcanvas 129825 class_ref 135329 // PeriodoDeTempo
+  classdiagramsettings member_max_width 0 end
+  xyz 308 400 2000
+end
+classcanvas 130465 class_ref 135585 // Funcao
+  classdiagramsettings member_max_width 0 end
+  xyz 632 336 2000
+end
+classcanvas 130849 class_ref 135713 // UniaoEuropeia
+  classdiagramsettings member_max_width 0 end
+  xyz 153 321 2000
+end
+classcanvas 131233 class_ref 135841 // PeriodosDeTrabalho
+  classdiagramsettings member_max_width 0 end
+  xyz 466 335 2000
+end
+relationcanvas 128929 relation_ref 134689 // trabalhou
+  from ref 128033 z 2001 label "trabalhou" italic max_width 255 xyz 467 195 2001 to ref 128545
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129185 relation_ref 134817 // <association>
+  from ref 128033 z 2001 to ref 128417
+  no_role_a no_role_b
+  multiplicity_a_pos 235 232 3000 multiplicity_b_pos 322 149 3000
+end
+relationcanvas 129313 relation_ref 134945 // <association>
+  from ref 128033 z 2001 to ref 128161
+  no_role_a no_role_b
+  multiplicity_a_pos 210 130 3000 multiplicity_b_pos 304 130 3000
+end
+relationcanvas 129441 relation_ref 135073 // <association>
+  from ref 128033 z 2001 to ref 128289
+  no_role_a no_role_b
+  multiplicity_a_pos 540 132 3000 multiplicity_b_pos 439 130 3000
+end
+relationcanvas 129953 relation_ref 135201 // PeriodoDeTrabalho
+  from ref 129569 z 2001 label "PeriodoDeTrabalho" italic max_width 255 xyz 312 333 2001 to ref 129825
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130081 relation_ref 134561 // <association>
+  from ref 128033 z 2001 to ref 128545
+  no_role_a no_role_b
+  multiplicity_a_pos 511 267 3000 multiplicity_b_pos 415 164 3000
+end
+relationcanvas 131105 relation_ref 135585 // <generalisation>
+  from ref 130849 z 2001 to ref 128417
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 131489 relation_ref 135713 // <association>
+  from ref 131233 z 2001 to ref 130465
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+line 129697 -_-_ decenter_begin 769 decenter_end 542
+  from ref 128929 z 2002 to ref 129569
+line 131361 -_-_ decenter_end 544
+  from ref 131233 z 2002 to ref 129953
+end

@@ -1,0 +1,12 @@
+window_sizes 1440 762 356 1078 646 64
+cleanlooks_style
+diagrams
+  active  classdiagram_ref 128033 // Exercicio1
+    1078 784 200 A4 5 0
+end
+show_stereotypes
+selected classdiagram_ref 128033 // Exercicio1
+open
+  classview_ref 128033 // Exercicio1
+end
+end

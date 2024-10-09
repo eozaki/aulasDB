@@ -1,0 +1,411 @@
+format 222
+"Aula3"
+  revision 3
+  modified_by 33 "erick"
+
+
+  
+  // class settings
+  default_attribute_visibility private default_relation_visibility private default_operation_visibility public
+  
+  classdiagramsettings draw_all_relations yes hide_attributes no hide_operations no hide_getset_operations no hide_ports no show_members_full_definition no show_members_visibility no show_members_stereotype no show_members_context no show_members_multiplicity no show_members_initialization no show_attribute_modifiers no member_max_width 127 show_parameter_dir yes show_parameter_name yes package_name_in_tab no class_drawing_mode natural drawing_language uml show_context_mode no auto_label_position yes show_relation_modifiers no show_relation_visibility no show_infonote no shadow yes gradient none show_stereotype_properties no end
+  
+  classcompositediagramsettings auto_label_position yes draw_all_relations yes shadow yes gradient none end
+  
+  usecasediagramsettings package_name_in_tab no show_context_mode no auto_label_position yes draw_all_relations yes class_drawing_mode actor shadow yes gradient none show_stereotype_properties no end
+  
+  sequencediagramsettings show_full_operations_definition no show_class_of_operation no write_horizontally yes instances_drawing_mode natural drawing_language uml draw_all_relations yes shadow yes gradient none show_stereotype_properties no show_class_context_mode no show_msg_context_mode no end
+  
+  collaborationdiagramsettings show_full_operations_definition no show_class_of_operation no show_hierarchical_rank no write_horizontally yes instances_drawing_mode natural drawing_language uml package_name_in_tab no show_class_pack_context_mode no show_msg_context_mode no draw_all_relations yes shadow yes gradient none show_stereotype_properties no end
+  
+  objectdiagramsettings write_horizontally yes package_name_in_tab no show_class_pack_context_mode no auto_label_position yes draw_all_relations yes shadow yes gradient none show_stereotype_properties no end
+  
+  objectcompositediagramsettings auto_label_position yes draw_all_relations yes shadow yes gradient none end
+  
+  componentdiagramsettings package_name_in_tab no show_context_mode no auto_label_position yes draw_all_relations yes shadow yes gradient none
+   draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no end
+  
+  deploymentdiagramsettings package_name_in_tab no show_context_mode no write_horizontally yes auto_label_position yes draw_all_relations yes shadow yes gradient none
+   draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no end
+  
+  statediagramsettings package_name_in_tab no show_context_mode no auto_label_position yes write_label_horizontally yes show_trans_definition no draw_all_relations yes shadow yes gradient none
+   show_activities yes region_horizontally yes drawing_language uml show_stereotype_properties no end
+  
+  activitydiagramsettings package_name_in_tab no show_context_mode no show_opaque_action_definition no auto_label_position yes write_label_horizontally no draw_all_relations yes shadow yes gradient none
+   show_infonote yes drawing_language uml show_stereotype_properties no end
+  
+  class_color yellow duration_color transparent continuation_color gray note_color blue fragment_color transparent subject_color transparent usecase_color yellow package_color transparent component_color green artifact_color green deploymentnode_color gray state_color yellow stateaction_color transparent activity_color transparent activityregion_color transparent activitypartition_color transparent activityaction_color transparent parameterpin_color white generalization_color black 
+  dpi 72
+  font_size 10
+  diagram_format A4
+
+  image_root_dir ""
+
+
+  mark_for_import
+  
+  classview 128033 "Exercicio1"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 134561 "Exercicio1"
+      classdiagramsettings hide_operations yes show_members_full_definition yes show_members_stereotype yes member_max_width 0 end
+      size A4-Landscape
+    end
+
+    class 134561 "Investigador"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 134561 "Nome"
+	private explicit_type "varchar[100]"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 134689 "Morada"
+	private explicit_type "varchar[100]"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 134561 // <association>
+	relation 134561 ----
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 134561 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 134689 // <association>
+      end
+
+      classrelation 134817 // (trabalhou)
+	relation 134689 ---- name "trabalhou"
+	  a role_name "" private
+	    classrelation_ref 134817 // (trabalhou)
+	  b role_name "" private
+	    classrelation_ref 134945 // (trabalhou)
+	  association_type class_ref 135201 // OrganismosTrabalhou
+      end
+
+      classrelation 135073 // <association>
+	relation 134817 ----
+	  a role_name "" multiplicity "0..1" private
+	    classrelation_ref 135073 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 135201 // <association>
+      end
+
+      classrelation 135329 // <association>
+	relation 134945 ----
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 135329 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 135457 // <association>
+      end
+
+      classrelation 135585 // <association>
+	relation 135073 ----
+	  a role_name "" multiplicity "0..1" private
+	    classrelation_ref 135585 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 135713 // <association>
+      end
+    end
+
+    class 134689 "AreaCientifica"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135457 // <association>
+	relation_ref 134945 // <association>
+      end
+
+      attribute 141601 "DesignacaoDaArea"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 134817 "GrauAcademico"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135713 // <association>
+	relation_ref 135073 // <association>
+      end
+
+      attribute 141473 "DesignacaoDoGrau"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 134945 "Pais"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135201 // <association>
+	relation_ref 134817 // <association>
+      end
+
+      attribute 141729 "NomeDoPais"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 135073 "Organismo"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 134689 // <association>
+	relation_ref 134561 // <association>
+      end
+
+      classrelation 134945 // (trabalhou)
+	relation_ref 134689 // trabalhou
+      end
+
+      attribute 141985 "DesignacaoDoOrganismo"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 135201 "OrganismosTrabalhou"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135841 // (PeriodoDeTrabalho)
+	relation 135201 ---- name "PeriodoDeTrabalho"
+	  a role_name "" private
+	    classrelation_ref 135841 // (PeriodoDeTrabalho)
+	  b role_name "" private
+	    classrelation_ref 135969 // (PeriodoDeTrabalho)
+	  association_type class_ref 135841 // PeriodosDeTrabalho
+      end
+    end
+
+    class 135329 "PeriodoDeTempo"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135969 // (PeriodoDeTrabalho)
+	relation_ref 135201 // PeriodoDeTrabalho
+      end
+
+      attribute 134817 "entrada"
+	private explicit_type "date"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 134945 "saida"
+	private explicit_type "date"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 135585 "Funcao"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 136737 // <association>
+	relation_ref 135713 // <association>
+      end
+
+      attribute 142113 "DesignacaoFuncao"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 135713 "UniaoEuropeia"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 136481 // <generalisation>
+	relation 135585 ---|>
+	  a public
+	    classrelation_ref 136481 // <generalisation>
+	  b parent class_ref 134945 // Pais
+      end
+
+      attribute 141857 "ECTS?"
+	private explicit_type "boolean"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 135841 "PeriodosDeTrabalho"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 136609 // <association>
+	relation 135713 ----
+	  a role_name "" private
+	    classrelation_ref 136609 // <association>
+	  b role_name "" private
+	    classrelation_ref 136737 // <association>
+      end
+    end
+  end
+
+  classview 134561 "Exercicio2"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 141089 "Exercicio2"
+      classdiagramsettings member_max_width 0 end
+      size A4
+    end
+  end
+end
